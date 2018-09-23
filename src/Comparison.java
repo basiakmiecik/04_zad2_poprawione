@@ -16,8 +16,8 @@ public class Comparison {
            line=line2;
        }
        else{
-           Point point=new Point(0,0);
-           Point point2= new Point(0,0);
+           Point point=new Point();
+           Point point2= new Point();
            Line line3= new Line(point,point2);
            line=line3;
        }
