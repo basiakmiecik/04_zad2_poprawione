@@ -1,3 +1,6 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Point {
     double x;
     double y;
@@ -22,4 +25,7 @@ public class Point {
     public void setY(double y) {
         this.y = y;
     }
+
+
+
 }

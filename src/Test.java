@@ -7,22 +7,19 @@ public class Test {
             Scanner scanner = new Scanner(System.in);
             scanner.useLocale(Locale.US);
 
-
-
-
-            System.out.print("ODCINEK 1\nPodaj wspolrzedne punktu START: \nX: ");
+            System.out.print("Odcinek 1\nPodaj wspolrzedne punktu START : \nX: ");
             double x1 = scanner.nextDouble();
             scanner.nextLine();
-            System.out.print("Y: ");
+            System.out.print("Y:");
             double y1 = scanner.nextDouble();
             scanner.nextLine();
-
-            System.out.print("Podaj wspolrzedne punktu KONIEC: \nX:");
+            System.out.print("\nPodaj wspolrzedne punktu KONIEC: \nX:");
             double x2 = scanner.nextDouble();
             scanner.nextLine();
-            System.out.print("Y: ");
+            System.out.print("Y:");
             double y2 = scanner.nextDouble();
             scanner.nextLine();
+
             Point pointStart= new Point(x1,y1);
             Point pointKoniec = new Point(x2, y2);
             Line line = new Line(pointStart,pointKoniec);
@@ -30,13 +27,13 @@ public class Test {
             System.out.print("Odcinek 2\nPodaj wspolrzedne punktu START : \nX: ");
             double x2_1 = scanner.nextDouble();
             scanner.nextLine();
-            System.out.print("Y: ");
+            System.out.print("Y:");
             double y2_1 = scanner.nextDouble();
             scanner.nextLine();
             System.out.print("\nPodaj wspolrzedne punktu KONIEC: \nX:");
             double x2_2 = scanner.nextDouble();
             scanner.nextLine();
-            System.out.print("Y: ");
+            System.out.print("Y:");
             double y2_2 = scanner.nextDouble();
             scanner.nextLine();
 
@@ -46,21 +43,17 @@ public class Test {
 
             Comparison comparison = new Comparison(line,line2);
 
-            if (comparison.comparelenght()> 0) {
-                if (comparison.comparelenght() == line.lengthLine()){
-                    System.out.println("Dłuższy jest odcinek 1");
-                    System.out.println("Początek odcinka jest w punkcie ("+pointStart.getX()+", " +pointStart.getY()+"), " +
-                            "a koniec w punkcie ("+pointKoniec.getX()+", "+pointKoniec.getY()+")");
-                    System.out.println("Długość odcinka wynosi "+ Math.round(line.lengthLine()));
-                } else {
-                    System.out.println("Dłuższy jest odcinek 2");
-                    System.out.println("Początek odcinka jest w punkcie ("+point2Start.getX()+", " +point2Start.getY()+"), " +
-                            "a koniec w punkcie ("+point2Koniec.getX()+", "+point2Koniec.getY()+")");
-                    System.out.println("Długość odcinka wynosi "+ Math.round(line2.lengthLine()));
-                }
-            } else {
-                System.out.println("Odcinki są rowne");
-            }
+                   if(comparison.comparelenght().lengthLine()==0) {
+                       System.out.println("Oba odcinki są takiej samej długości.");
+                   }
+                        else{
+                       System.out.println("Dłuższy jest odcinek o poczatku w punkcie (" + comparison.comparelenght().start.getX() +
+                               ", " + comparison.comparelenght().start.getY() + "), " +
+                               "a koniec w punkcie (" + comparison.comparelenght().end.getX() + ", "
+                               + comparison.comparelenght().end.getY() + ")");
+                       System.out.println("Długość odcinka wynosi " + Math.round(comparison.comparelenght().lengthLine() * 100) / 100.00);
+                   }
+
 
 
         }

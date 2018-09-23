@@ -7,17 +7,21 @@ public class Comparison {
         this.line2 = line2;
     }
 
-    double comparelenght(){
-        double greatherlegth;
+    public Line comparelenght(){
+        Line line;
        if (line1.lengthLine()>line2.lengthLine()){
-           greatherlegth=line1.lengthLine();
+           line=line1;
        }
-       else if (line1.lengthLine()<line2.lengthLine()){
-           greatherlegth=line2.lengthLine();
+       else if (line2.lengthLine()>line1.lengthLine()){
+           line=line2;
        }
        else{
-           greatherlegth=0;
+           Point point=new Point(0,0);
+           Point point2= new Point(0,0);
+           Line line3= new Line(point,point2);
+           line=line3;
        }
-    return greatherlegth;}
+    return line;
+    }
 
 }
