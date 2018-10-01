@@ -7,8 +7,9 @@ public class Line {
         this.end = end;
     }
 
-    public double lengthLine(){
+    public double lengthLine() {
 
-        double length= Math.sqrt(Math.pow((end.x-start.x),2)+Math.pow((end.y-start.y),2));
-    return length;}
+        double length = Math.sqrt(Math.pow((end.x - start.x), 2) + Math.pow((end.y - start.y), 2));
+        return length;
+    }
 }
